@@ -21,12 +21,7 @@ const OnboardingScreen = () => {
                         <Text style={styles.title}>Apex Drive Ltd.</Text>
                     </View>
                 </View>
-                <Button onPress= {()=> 
-                    {
-                        console.log('succescfully pressed the get started button');
-                        navigate('OnBoardingScreenTwo')
-                        console.log('failed to navigate to the onboarding screen two');
-                    }} text="Get Started" buttonStyles={styles.buttonStyle} textStyles={styles.buttonText}/>
+                <Button onPress= {()=> navigate('OnBoardingScreenTwo')} text="Get Started" buttonStyles={styles.buttonStyle} textStyles={styles.buttonText}/>
             </ImageBackground>
         </ImageBackground>
     );
