@@ -34,12 +34,7 @@ const OnBoardingScreenTwo = () => {
                                     Let’s get started on your journey.
                                 </Text>
                                 </View>
-                                <Button onPress= {()=> 
-                                {
-                                    console.log('succescfully pressed the get started button');
-                                    navigate('OnBoardingScreenTwo')
-                                    console.log('failed to navigate to the onboarding screen two');
-                                }} text="Get Started" buttonStyles={styles.buttonStyle} textStyles={styles.buttonText}/>
+                                <Button onPress= {()=> navigate('SigninScreen')} text="Get Started" buttonStyles={styles.buttonStyle} textStyles={styles.buttonText}/>
                         </View>
                     </ImageBackground>
                 </ImageBackground>

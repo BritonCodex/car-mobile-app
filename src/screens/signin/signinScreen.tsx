@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, ScrollView, Text, StyleSheet, View } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from "@expo/vector-icons";
 import assets from '../../../assets';
 import { signinStyles } from './signinStyles';
 import Button from '../../components/button/buttonComponent';

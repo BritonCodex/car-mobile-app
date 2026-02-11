@@ -17,30 +17,33 @@ import {navigationRef} from './navigationUtilities';
 
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import EditScreen from '../screens/account/edit/edit.screen';
-import ProfileScreen from '../screens/account/profile/profile.screen';
-import BookingConfirmationScreen from '../screens/booking/confirmation/confirmation.screen';
-import BookingDetailsScreen from '../screens/booking/details/booking.screen';
-import BookingPaymentScreen from '../screens/booking/payment/payment.screen';
-import BookingStatusScreen from '../screens/booking/status/status.screen';
-import CarScreen from '../screens/car/car.screen';
-import HomeScreen from '../screens/home/home.screen';
-import MessageScreen from '../screens/message/message.screen';
-import NotificationScreen from '../screens/notification/notification.screen';
-import OnBoardingScreen from '../screens/onboarding/onboarding.screen';
-import OnBoardingScreenTwo from '../screens/onboarding/onboardingTwo.screen';
-import OtpScreen from '../screens/otp/otp.screen';
-import ResetScreen from '../screens/reset/reset.screen';
-import ReviewScreen from '../screens/review/review.screen';
-import SearchScreen from '../screens/search/search.screen';
-import SignUpScreen from '../screens/signup/signup.screen';
-import SignInScreen from '../screens/singin/signin.screen';
-import VerifyScreen from '../screens/verify/verify.screen';
+import { MaterialIcons } from "@expo/vector-icons";
+
+// import EditScreen from '../screens/account/edit/edit.screen';
+// import ProfileScreen from '../screens/account/profile/profile.screen';
+// import BookingConfirmationScreen from '../screens/booking/confirmation/confirmation.screen';
+// import BookingDetailsScreen from '../screens/booking/details/booking.screen';
+// import BookingPaymentScreen from '../screens/booking/payment/payment.screen';
+// import BookingStatusScreen from '../screens/booking/status/status.screen';
+// import CarScreen from '../screens/car/car.screen';
+// import HomeScreen from '../screens/home/home.screen';
+// import MessageScreen from '../screens/message/message.screen';
+// import NotificationScreen from '../screens/notification/notification.screen';
+
+// import OtpScreen from '../screens/otp/otp.screen';
+// import ResetScreen from '../screens/reset/reset.screen';
+// import ReviewScreen from '../screens/review/review.screen';
+// import SearchScreen from '../screens/search/search.screen';
+// import VerifyScreen from '../screens/verify/verify.screen';
 import {colors} from '../themes/colors';
 import {scale} from '../themes/scale';
 import { navigationStyles } from './navigationStyles';
-import ChatScreen from '../screens/message/chat/chat.screen';
+// import ChatScreen from '../screens/message/chat/chat.screen';
+
+import OnboardingScreen from '../screens/onboarding/onboardingScreen';
+import OnBoardingScreenTwo from '../screens/onboarding/onboardingScreenTwo';
+// import SignUpScreen from '../screens/signup/signup.screen';
+import SigninScreen from '../screens/signin/signinScreen';
 
 type NavigationProps = Partial<
   React.ComponentProps<typeof NavigationContainer>
@@ -136,8 +139,8 @@ const AuthStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen
-        name="OnBoardingScreen"
-        component={OnBoardingScreen}
+        name="OnboardingScreen"
+        component={OnboardingScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
@@ -150,40 +153,13 @@ const AuthStack = () => {
         }}
       />
       <Stack.Screen
-        name="SignInScreen"
-        component={SignInScreen}
+        name="SigninScreen"
+        component={SigninScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
-      <Stack.Screen
-        name="SignUpScreen"
-        component={SignUpScreen}
-        options={{
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-        }}
-      />
-      <Stack.Screen
-        name="ResetScreen"
-        component={ResetScreen}
-        options={{
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-        }}
-      />
-      <Stack.Screen
-        name="VerifyScreen"
-        component={VerifyScreen}
-        options={{
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-        }}
-      />
-      <Stack.Screen
-        name="OtpScreen"
-        component={OtpScreen}
-        options={{
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-        }}
-      />
+      
     </Stack.Navigator>
   );
 };
