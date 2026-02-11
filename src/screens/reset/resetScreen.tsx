@@ -39,7 +39,7 @@ const ResetScreen = () => {
           </View>
           {renderMarginTop(28)}
           <Button
-            //onPress={() => navigate('VerifyScreen')}
+            onPress={() => navigate('VerifyScreen')}
             text="Continue"
             textStyles={styles.buttonText}
           />
