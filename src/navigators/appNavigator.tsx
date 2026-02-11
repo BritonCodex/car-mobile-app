@@ -30,7 +30,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 // import MessageScreen from '../screens/message/message.screen';
 // import NotificationScreen from '../screens/notification/notification.screen';
 
-// import OtpScreen from '../screens/otp/otp.screen';
+import OtpScreen from '../screens/otp/otpScreen';
 import ResetScreen from '../screens/reset/resetScreen';
 // import ReviewScreen from '../screens/review/review.screen';
 // import SearchScreen from '../screens/search/search.screen';
@@ -181,7 +181,13 @@ const AuthStack = () => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
-
+      <Stack.Screen
+        name="OtpScreen"
+        component={OtpScreen}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
       
     </Stack.Navigator>
   );
