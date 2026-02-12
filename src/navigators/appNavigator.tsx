@@ -26,7 +26,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 // import BookingPaymentScreen from '../screens/booking/payment/payment.screen';
 // import BookingStatusScreen from '../screens/booking/status/status.screen';
 // import CarScreen from '../screens/car/car.screen';
-// import HomeScreen from '../screens/home/home.screen';
+import HomeScreen from '../screens/home/homeScreen';
 // import MessageScreen from '../screens/message/message.screen';
 // import NotificationScreen from '../screens/notification/notification.screen';
 
@@ -64,7 +64,7 @@ const TabStack = () => {
         tabBarHideOnKeyboard: true,
         keyboardHidesTabBar: true,
         tabBarIcon: ({focused, size}) => {
-          let iconName: string = 'camera';
+          let iconName: React.ComponentProps<typeof MaterialIcons>['name'] = 'camera';
           if (route.name == 'HomeScreen') {
             iconName = focused ? 'home' : 'home';
           } else if (route.name == 'SearchScreen') {
@@ -111,26 +111,7 @@ const TabStack = () => {
         component={HomeScreen}
         options={{tabBarLabel: 'Onboarding', tabBarShowLabel: false}}
       />
-      <Tab.Screen
-        name="SearchScreen"
-        component={SearchScreen}
-        options={{tabBarLabel: 'Onboarding', tabBarShowLabel: false}}
-      />
-      <Tab.Screen
-        name="MessageScreen"
-        component={MessageScreen}
-        options={{tabBarLabel: 'Onboarding', tabBarShowLabel: false}}
-      />
-      <Tab.Screen
-        name="NotificationScreen"
-        component={NotificationScreen}
-        options={{tabBarLabel: 'Onboarding', tabBarShowLabel: false}}
-      />
-      <Tab.Screen
-        name="ProfileScreen"
-        component={ProfileScreen}
-        options={{tabBarLabel: 'Onboarding', tabBarShowLabel: false}}
-      />
+
     </Tab.Navigator>
   );
 };
@@ -139,7 +120,7 @@ const AuthStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen
-        name="OnboardingScreen"
+        name="OnBoardingScreen"
         component={OnboardingScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
@@ -153,7 +134,7 @@ const AuthStack = () => {
         }}
       />
       <Stack.Screen
-        name="SigninScreen"
+        name="SignInScreen"
         component={SigninScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
@@ -259,7 +240,7 @@ const RootStack = () => {
 };
 
 const CombinedStack = () => {
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false, animationEnabled: true}}>
@@ -297,7 +278,7 @@ const CombinedStack = () => {
 
 export function AppNavigator(props: NavigationProps) {
   return (
-    <NavigationContainer ref={navigationRef} {...props}>
+    <NavigationContainer ref={navigationRef as any} {...props}>
       {CombinedStack()}
     </NavigationContainer>
   );

@@ -49,7 +49,7 @@ const SignUpScreen = () =>{
                   placeholder={'Country'}
                 />
             </View>
-             {renderMarginTop(12)}
+            {renderMarginTop(12)}
 
             <View style={styles.buttonContainer}>
                 <Button text="Login" textStyles={styles.buttonText} />

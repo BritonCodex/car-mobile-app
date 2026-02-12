@@ -40,7 +40,7 @@ const VerifyScreen = () => {
           </View>
           {renderMarginTop(28)}
           <Button
-           onPress={() => navigate('OtpScreen')}
+            onPress={() => navigate('OtpScreen')}
             text="Continue"
             textStyles={styles.buttonText}
           />

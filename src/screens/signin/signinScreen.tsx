@@ -14,7 +14,7 @@ import {navigate} from '../../navigators/navigationUtilities';
 
 const SigninScreen = () => {
     const styles = signinStyles();
-      const {isSecure, setIsSecure} = useSignin();
+    const {isSecure, setIsSecure} = useSignin();
     //logo for the sign-in screen
     const {logo_black} = assets;
     return (
